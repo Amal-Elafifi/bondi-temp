@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --dark-color: #19283F;
+    --green-color: #33D1CC;
+    --red-color: #FF3150;
+    --yellow-color: #FFC400;
+    --section-color: #EFF7FA;
+}
+.main-button {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.main-button:hover {
+    background-color: var(--green-color);
+    color: white;
+}
+.number {
+    color: var(--section-color);
+}
+.icon {
+    color: var(--green-color);
+}
+.main-paragraph {
+    position: relative;
+}
+.main-paragraph::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: var(--green-color);
+    top: 40px;
+    margin-left: -150px;
+}
+/* start navbar */
+.navbar {
+    background-color: var(--dark-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    border: 1px solid white;
+    font-size: 28px;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+    border-color: var(--green-color);
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green-color);
+}
+.navbar .navbar-collapse svg:not(:root).svg-inline--fa {
+    border-left: 1px solid var(--green-color);
+    color: var(--green-color);
+    font-size: 20px;
+}
+/* end navbar */
+/* start landing section */
+.landing {
+    width: calc(100vh -75px);
+    background-color: var(--dark-color);
+}
+/* end landing section */
+/* start features section */
+.features .container {
+    letter-spacing: -1px;
+}
+.features .icon-holder .icon {
+    margin-left: -90px;
+}
+.features h3 {
+    color: var(--yellow-color);
+    margin: .5rem 0 1rem 0;
+}
+/* end features sction */
+/* start our work section */
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul li {
+    width: 70px;
+    height: 35px;
+}
+.our-work ul li a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}
+.our-work ul li a:hover {
+    color: var(--red-color);
+}
+.our-work ul li a.active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    border-radius: 20px;
+}
+.our-work .box {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: .3s;
+    background-color: #33d1cca6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+/* end our-work section */
+/* start stuff section */
+.stuff .paragraph {
+    width: 500px;
+}
+/* end stuff section */
+/* start our-team section */
+.our-team {
+    background-color: var(--section-color);
+}
+.our-team .main-title h2 {
+    color: var(--yellow-color);
+    font-weight: 800;
+}
+.our-team .box h4 {
+    background-color: var(--green-color);
+    color: white;
+}
+.our-team .box blockquote {
+    line-height: 1.3;
+}
+/* end our-team section */
+/* start project section */
+.project {
+    background-color: var(--dark-color);
+}
+/* end project section */
+/* start blog section */
+.blog .main-paragraph::after {
+    margin-left: -100px;
+}
+.blog .box p {
+    line-height: 1.3;
+}
+/* end blog section */
+/* start subscribe section */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+.subscribe form div {
+    font-weight: 800;
+    font-size: 20px;
+}
+.subscribe input[type= "text"]{
+    border: none;
+    border-bottom: 1px solid white;
+}
+.subscribe input[type= "text"]:focus{
+    outline: none;
+}
+.subscribe input::placeholder{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.subscribe button {
+    background-color: black;
+    color: var(--yellow-color);
+}
+.subscribe button:hover {
+    background-color: white;
+    color: black;
+}
+/* end subscribe section */
+/* start footer section */
+.footer {
+    background-color: var(--dark-color);
+}
+.footer li {
+    padding: 3px;
+}
+.footer p .aqua {
+    color: var(--green-color)
+}
+.footer p .yellow {
+    color: var(--yellow-color);
+}
+.footer a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: bold;
+}
+.footer .icons svg {
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.footer .icons .facebook {
+    background-color: #1877f2;
+}
+.footer .icons .twitter {
+    background-color: #1da1f2;
+}
+.footer .icons .linkedin {
+    background-color: #0077b5;
+}
+.footer .icons .youtube {
+    background-color: #ff0000;
+}
+/* end footer section */
